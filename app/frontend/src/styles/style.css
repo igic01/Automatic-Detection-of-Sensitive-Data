@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --black: #10100E;
+  --white: #fffff0;
+  --gray: #202221;
+  --light-gray: #C0C2C1;
+  --radius: 4px;
+
+  --title: 18px;
+  --text: 16px;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+}
+
+#root {
+  display: flex;
+  color: var(--white);
+  padding: 16px;
+  gap: 16px;
+  font-size: var(--text);
+}

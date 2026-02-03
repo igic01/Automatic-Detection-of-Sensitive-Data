@@ -1,0 +1,179 @@
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+}
+
+.dragging {
+    cursor: grabbing;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.cropping {
+    cursor: default;
+}
+
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.actionBar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background: #1f1f1f;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttonLarge {
+    padding: 10px 14px;
+}
+
+.buttonActive {
+    background: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    user-select: none;
+    max-width: none;
+}
+
+.cropOverlay {
+    position: absolute;
+    border: 2px solid #0d6efd;
+    pointer-events: auto;
+    cursor: move;
+    box-sizing: border-box;
+}
+
+.cropHandle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0d6efd;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+}
+
+.coverLayer {
+    position: absolute;
+    pointer-events: auto;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+.coverBlock {
+    position: absolute;
+    background: var(--cover-color, #000);
+    opacity: var(--cover-opacity, 1);
+    transition: filter 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+    cursor: move;
+}
+
+.coverHost {
+    position: absolute;
+    inset: 0;
+    pointer-events: auto;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.coverBlock:hover {
+    filter: grayscale(1);
+    opacity: 0.35;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.coverSelected {
+    outline: 2px solid #0d6efd;
+    outline-offset: -2px;
+}
+
+.coverHandle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #0d6efd;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.coverRemove {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detectBanner {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 12;
+    pointer-events: auto;
+}
+
+.copyBanner {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    z-index: 13;
+    pointer-events: none;
+}

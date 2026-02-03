@@ -1,0 +1,103 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 280px;
+    min-width: 260px;
+    max-width: 320px;
+    box-sizing: border-box;
+}
+
+.sidebar>div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--gray);
+    padding: 12.8px;
+    border-radius: var(--radius);
+    width: auto;
+}
+
+.sidebar>div>h3 {
+    margin-bottom: 4px;
+    text-wrap: nowrap;
+    font-size: var(--title);
+}
+
+.sidebar>div>label {
+    line-height: var(--text) + 2px;
+    display: flex;
+    gap: 8px;
+}
+
+.sidebar>.tools {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 16px;
+    padding: 16px;
+}
+
+.sidebar>.tools>* {
+    margin: auto;
+    width: 100%;
+}
+
+.ocrCard {
+    gap: 8px;
+}
+
+.ocrStatus {
+    font-size: 14px;
+    color: var(--light-gray);
+}
+
+.ocrText {
+    width: 100%;
+    min-height: 140px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius);
+    padding: 8px;
+    resize: vertical;
+}
+
+.ocrActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.copyFeedback {
+    font-size: 14px;
+    color: #9ae6b4;
+}
+
+.error {
+    color: #ff7b7b;
+    font-size: 14px;
+}
+
+.colorPickerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.colorPicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.colorPicker input[type="color"] {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
